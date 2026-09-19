@@ -6,6 +6,18 @@
     <title>Vera Lúcia - Portfólio</title>
     <!-- Tailwind CSS para estilização rápida e responsiva -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
 </head>
 <body class="bg-pink-400 text-white min-h-screen flex flex-col justify-between font-sans">
 
@@ -17,16 +29,67 @@
         <p class="text-lg text-pink-100 mt-1">Desenvolvedora Front-end | React | TypeScript | Tailwind CSS</p>
     </header>
 
-    <!-- FAIXA DE FERRAMENTAS / STACK -->
-    <section class="py-4 px-4 flex justify-center items-center flex-wrap gap-4 bg-pink-700/50 shadow-inner">
-        <img src="https://skillicons.dev/icons?i=react,ts,js,html,css,tailwind,vite,reactnative,nodejs,express,python,postgres,mysql,supabase,firebase,vercel,git,github,vscode,postman,figma,prisma" alt="Ferramentas" class="max-w-full h-auto">
+    <!-- FAIXA DE FERRAMENTAS / STACK (ícones passando em looping) -->
+    <section class="py-4 bg-pink-700/50 shadow-inner overflow-hidden">
+        <div class="flex w-max gap-8 animate-marquee">
+            <!-- Grupo 1 -->
+            <div class="flex items-center gap-8 shrink-0">
+                <img src="https://skillicons.dev/icons?i=react" class="h-12 w-12" alt="React">
+                <img src="https://skillicons.dev/icons?i=ts" class="h-12 w-12" alt="TypeScript">
+                <img src="https://skillicons.dev/icons?i=js" class="h-12 w-12" alt="JavaScript">
+                <img src="https://skillicons.dev/icons?i=html" class="h-12 w-12" alt="HTML5">
+                <img src="https://skillicons.dev/icons?i=css" class="h-12 w-12" alt="CSS3">
+                <img src="https://skillicons.dev/icons?i=tailwind" class="h-12 w-12" alt="Tailwind CSS">
+                <img src="https://skillicons.dev/icons?i=vite" class="h-12 w-12" alt="Vite">
+                <img src="https://skillicons.dev/icons?i=reactnative" class="h-12 w-12" alt="React Native">
+                <img src="https://skillicons.dev/icons?i=nodejs" class="h-12 w-12" alt="Node.js">
+                <img src="https://skillicons.dev/icons?i=express" class="h-12 w-12" alt="Express">
+                <img src="https://skillicons.dev/icons?i=python" class="h-12 w-12" alt="Python">
+                <img src="https://skillicons.dev/icons?i=postgres" class="h-12 w-12" alt="PostgreSQL">
+                <img src="https://skillicons.dev/icons?i=mysql" class="h-12 w-12" alt="MySQL">
+                <img src="https://skillicons.dev/icons?i=supabase" class="h-12 w-12" alt="Supabase">
+                <img src="https://skillicons.dev/icons?i=firebase" class="h-12 w-12" alt="Firebase">
+                <img src="https://skillicons.dev/icons?i=vercel" class="h-12 w-12" alt="Vercel">
+                <img src="https://skillicons.dev/icons?i=git" class="h-12 w-12" alt="Git">
+                <img src="https://skillicons.dev/icons?i=github" class="h-12 w-12" alt="GitHub">
+                <img src="https://skillicons.dev/icons?i=vscode" class="h-12 w-12" alt="VS Code">
+                <img src="https://skillicons.dev/icons?i=postman" class="h-12 w-12" alt="Postman">
+                <img src="https://skillicons.dev/icons?i=figma" class="h-12 w-12" alt="Figma">
+                <img src="https://skillicons.dev/icons?i=prisma" class="h-12 w-12" alt="Prisma">
+            </div>
+            <!-- Grupo 2 (cópia idêntica, para o loop ficar contínuo) -->
+            <div class="flex items-center gap-8 shrink-0" aria-hidden="true">
+                <img src="https://skillicons.dev/icons?i=react" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=ts" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=js" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=html" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=css" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=tailwind" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=vite" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=reactnative" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=nodejs" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=express" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=python" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=postgres" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=mysql" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=supabase" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=firebase" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=vercel" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=git" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=github" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=vscode" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=postman" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=figma" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=prisma" class="h-12 w-12" alt="">
+            </div>
+        </div>
     </section>
 
     <!-- SEÇÃO SOBRE MIM E EXPERIÊNCIAS -->
     <main class="max-w-3xl mx-auto px-6 py-10 space-y-8 bg-pink-700/30 rounded-xl my-6 shadow-lg">
         <section>
             <h2 class="text-2xl font-bold border-b-2 border-pink-400 pb-2 mb-4">Sobre mim</h2>
-            <div class="space-y-4 text-pink-50 leading-relaxed text-justify">
+            <div class="space-y-4 text-pink-50 leading-relaxed text-left">
                 <p>
                     Sou uma Desenvolvedora Front-end e estudante de Desenvolvimento de Sistemas no SENAI/SC, trazendo para a tecnologia uma sólida bagagem e experiência prévia em manutenção elétrica, eletromecânica e automação industrial. Em minha transição de carreira para a área de TI, uni a minha paixão por resolução de problemas complexos ao desenvolvimento de software moderno. Desde então, tenho me destacado na criação de aplicações web eficientes, responsivas e focadas na experiência do usuário.
                 </p>
