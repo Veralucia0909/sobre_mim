@@ -4,9 +4,9 @@
 
 # Vera Lúcia
 
-### Desenvolvedora Front-end | React • TypeScript • Tailwind CSS
+### Desenvolvedora Front-end | React • JavaScript • PWA mobile-first
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=500&size=20&duration=3000&pause=800&color=FFFFFF&center=true&vCenter=true&width=460&height=35&lines=Apaixonada+por+resolver+problemas;Front-end+com+React+%2B+TypeScript;Sempre+aprendendo+algo+novo" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&weight=500&size=20&duration=3000&pause=800&color=FFFFFF&center=true&vCenter=true&width=520&height=35&lines=Apaixonada+por+resolver+problemas;React+%2B+JavaScript+%2B+PWA+mobile-first;Sistema+em+produ%C3%A7%C3%A3o+com+cliente+real;Sempre+aprendendo+algo+novo" alt="Typing SVG" />
 
 <br/>
 
@@ -28,12 +28,12 @@
 <p align="center">
   <marquee behavior="scroll" direction="left" scrollamount="6">
     <img src="https://skillicons.dev/icons?i=react" height="50" />&nbsp;&nbsp;
-    <img src="https://skillicons.dev/icons?i=ts" height="50" />&nbsp;&nbsp;
     <img src="https://skillicons.dev/icons?i=js" height="50" />&nbsp;&nbsp;
     <img src="https://skillicons.dev/icons?i=html" height="50" />&nbsp;&nbsp;
     <img src="https://skillicons.dev/icons?i=css" height="50" />&nbsp;&nbsp;
-    <img src="https://skillicons.dev/icons?i=tailwind" height="50" />&nbsp;&nbsp;
     <img src="https://skillicons.dev/icons?i=vite" height="50" />&nbsp;&nbsp;
+    <img src="https://skillicons.dev/icons?i=ts" height="50" />&nbsp;&nbsp;
+    <img src="https://skillicons.dev/icons?i=tailwind" height="50" />&nbsp;&nbsp;
     <img src="https://skillicons.dev/icons?i=reactnative" height="50" />&nbsp;&nbsp;
     <img src="https://skillicons.dev/icons?i=nodejs" height="50" />&nbsp;&nbsp;
     <img src="https://skillicons.dev/icons?i=express" height="50" />&nbsp;&nbsp;
@@ -58,7 +58,7 @@
 
 Sou uma Desenvolvedora Front-end e estudante de Desenvolvimento de Sistemas no SENAI/SC, trazendo para a tecnologia uma sólida bagagem e experiência prévia em manutenção elétrica, eletromecânica e automação industrial. Em minha transição de carreira para a área de TI, uni a minha paixão por resolução de problemas complexos ao desenvolvimento de software moderno. Desde então, tenho me destacado na criação de aplicações web eficientes, responsivas e focadas na experiência do usuário.
 
-Tenho experiência em tecnologias de front-end, como React, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, além de trabalhar com Vite e bibliotecas para consumo de APIs com Axios. No ecossistema de desenvolvimento, também possuo conhecimentos em back-end com Node.js, Express, Python e manipulação de bancos de dados relacionais e em nuvem como PostgreSQL, MySQL, Supabase e Firebase, além de ferramentas como Git, GitHub, Postman, Prisma e Figma.
+Trabalho principalmente com **React, JavaScript (ES6+), HTML5 e CSS3**, com foco em **PWA mobile-first** — aplicações instaláveis, que funcionam offline e são pensadas para o celular antes do desktop. Uso Vite no build, Tailwind CSS na estilização e consumo de APIs REST com Axios. Também tenho experiência com **Supabase** (Postgres, Edge Functions e autenticação) e **Firebase**, e estou aprofundando **TypeScript, Node.js, Express, Prisma e PostgreSQL** nos projetos de back-end do curso. No dia a dia: Git, GitHub, Postman e Figma.
 
 Sou apaixonada por aprender continuamente, otimizar processos e criar soluções que geram impacto real. Acredito que a combinação da minha vivência anterior em ambientes industriais com a agilidade do desenvolvimento web me proporciona uma visão analítica diferenciada na entrega de software de qualidade.
 
@@ -67,15 +67,22 @@ Sou apaixonada por aprender continuamente, otimizar processos e criar soluções
 ### 📄 AssinaDoc — Assinatura digital de documentos via WhatsApp
 *(em produção, cliente real)*
 
-**Stack:** JavaScript (ES6+), HTML5, CSS3, Supabase (Postgres + autenticação), APIs REST/JSON, deploy na Vercel
+**Stack:** JavaScript (ES6+), HTML5, CSS3, Supabase (Postgres + Edge Functions), APIs REST/JSON, deploy na Vercel
 
 - Identifiquei o gargalo no fluxo de documentos da imobiliária onde trabalho e propus, desenvolvi e coloquei no ar a solução — do levantamento do problema ao deploy.
 - Integração com WhatsApp e consumo de APIs REST (JSON) para envio, acompanhamento e assinatura dos documentos, eliminando deslocamentos de inquilinos e proprietários.
 - Modelagem das tabelas, autenticação e regras de acesso no Supabase, com controle de status de cada documento.
+- Segurança tratada no servidor: senhas em Edge Functions (nenhum segredo no código do site), PDFs em bucket privado com link temporário de 15 minutos, sessão com validade e bloqueio contra tentativa automática de senha.
+- Consentimento LGPD registrado antes da assinatura.
 - Deploy contínuo na Vercel integrado ao GitHub: cada push na branch principal publica automaticamente a nova versão.
 - Sistema em uso real: evolução e correção de bugs contínuas a partir do feedback de quem usa todos os dias.
 
-🔗 [github.com/Veralucia0909/duda-imoveis-assinadoc](https://github.com/Veralucia0909/duda-imoveis-assinadoc)
+🔗 **[assinadocwhatsapp.com.br](https://www.assinadocwhatsapp.com.br/)** · *código privado (sistema de cliente)*
+
+<!-- ▼ VÍDEO: arraste o arquivo assinadoc-demo.mp4 aqui na caixa de edição do README no GitHub.
+     O GitHub sobe o arquivo e troca esta linha pelo link sozinho. ▼ -->
+
+> **Demonstração (52s):** fluxo completo em modo demonstração — login, preenchimento, geração do link, assinatura no celular, PDF assinado e painel de acompanhamento. Todos os dados do vídeo são fictícios.
 
 ### 🚌 BusOnTime Floripa — App PWA de mobilidade urbana
 *(2º lugar Hackathon SENAI 2026)*
@@ -86,25 +93,33 @@ Sou apaixonada por aprender continuamente, otimizar processos e criar soluções
 - Rastreamento de ônibus em tempo real com mapas interativos (Leaflet) e previsão de lotação apoiada em IA.
 - Funcionamento offline e instalação na tela inicial via Service Workers, pensando em quem espera o ônibus com conexão instável.
 
-🔗 [github.com/Veralucia0909/busOnTime](https://github.com/Veralucia0909/busOnTime)
+🔗 [busontime-floripa.vercel.app](https://busontime-floripa.vercel.app/) · [código no GitHub](https://github.com/Veralucia0909/busOnTime)
 
 ### 💰 Gestão Financeira — Aplicação web com Firebase
-*(projeto acadêmico)*
+*(projeto acadêmico em equipe — minha parte: autenticação)*
 
-**Stack:** JavaScript, HTML5, CSS3, Firebase (Authentication e Firestore)
+**Stack:** JavaScript (ES6+), HTML5, CSS3, Firebase Authentication, deploy na Vercel
 
-- Cadastro e login de usuários com Firebase Authentication e persistência de receitas e despesas no Firestore.
-- Geração de gráficos e tabela detalhada de gastos a partir dos dados de cada usuário, para apoiar a organização financeira.
+- Desenvolvi o cadastro e o login de usuários com Firebase Authentication, incluindo validação de formulário, tratamento de erros e a sessão que liga cada usuário aos seus próprios dados.
+- A persistência das movimentações no Firestore e os gráficos ficaram a cargo de outro integrante da equipe.
+
+🔗 [gestao-financeira-crud.vercel.app](https://gestao-financeira-crud.vercel.app/) · [código no GitHub](https://github.com/Veralucia0909/gestao-financeira)
 
 ### ⚡ KitEnergia — PWA de leitura e gestão de energia
 *(projeto acadêmico)*
 
-**Stack:** React, JavaScript, PWA, armazenamento local (LocalStorage)
+**Stack:** React, Vite, JavaScript, PWA (Service Worker + Manifest), armazenamento local (LocalStorage), deploy na Vercel
 
 - CRUD completo para leitura e acompanhamento do consumo de 12 unidades habitacionais.
-- Interface responsiva desenhada para uso no celular durante a leitura em campo.
+- App instalável na tela inicial e com funcionamento offline — pensado para quem faz a leitura em campo, onde nem sempre há sinal.
+- Interface responsiva desenhada mobile-first, para uso no celular durante a leitura.
 
-🔗 [github.com/Veralucia0909/KitEnergia](https://github.com/Veralucia0909/KitEnergia)
+🔗 [kitenergia.vercel.app](https://kitenergia.vercel.app/) · [código no GitHub](https://github.com/Veralucia0909/KitEnergia)
+
+<!-- ▼ VÍDEO: arraste o arquivo kitenergia-demo.mp4 aqui na caixa de edição do README no GitHub.
+     O GitHub sobe o arquivo e troca esta linha pelo link sozinho. ▼ -->
+
+> **Demonstração (44s):** cadastro de leitura, acompanhamento do consumo e instalação do app na tela inicial.
 
 ---
 
