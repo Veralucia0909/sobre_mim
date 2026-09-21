@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/649cf2e5-148e-4e1e-97ad-3f0b96e6023e
+
 <div align="center">
 
 <img src="./assets/foto.jpg" width="160" height="160" style="border-radius:50%;object-fit:cover;" alt="Vera Lúcia"/>
@@ -79,7 +83,11 @@ Sou apaixonada por aprender continuamente, otimizar processos e criar soluções
 
 🔗 **[assinadocwhatsapp.com.br](https://www.assinadocwhatsapp.com.br/)** · *código privado (sistema de cliente)*
 
-<!-- ▼ VÍDEO: arraste o arquivo assinadoc-demo.mp4 aqui na caixa de edição do README no GitHub.
+<!-- ▼ VÍDEO
+
+https://github.com/user-attachments/assets/f2bd6dc5-c6d9-4c18-8da0-9baecc0e90c7
+
+: arraste o arquivo assinadoc-demo.mp4 aqui na caixa de edição do README no GitHub.
      O GitHub sobe o arquivo e troca esta linha pelo link sozinho. ▼ -->
 
 > **Demonstração (52s):** fluxo completo em modo demonstração — login, preenchimento, geração do link, assinatura no celular, PDF assinado e painel de acompanhamento. Todos os dados do vídeo são fictícios.
