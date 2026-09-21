@@ -3,183 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vera Lúcia - Portfólio</title>
-    <!-- Tailwind CSS para estilização rápida e responsiva -->
+    <title>Vera Lúcia Paula de Lima — Desenvolvedora Front-end</title>
+    <meta name="description" content="Desenvolvedora front-end júnior em Florianópolis. React, JavaScript e PWA mobile-first. Mantenho o AssinaDoc em produção e fui 2º lugar no Hackathon SENAI 2026.">
+    <meta name="author" content="Vera Lúcia Paula de Lima">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Vera Lúcia Paula de Lima — Desenvolvedora Front-end">
+    <meta property="og:description" content="React, JavaScript e PWA mobile-first. Sistema em produção com cliente real e 2º lugar no Hackathon SENAI 2026.">
+    <meta property="og:url" content="https://veralucia-portfolio.vercel.app">
+    <meta property="og:image" content="https://veralucia-portfolio.vercel.app/assets/foto.jpg">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%239d174d'/><text y='.9em' x='50%25' text-anchor='middle' font-size='62' font-family='system-ui,sans-serif' font-weight='700' fill='%23fdf2f8'>V</text></svg>">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @keyframes marquee {
             from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
+            to   { transform: translateX(-50%); }
         }
-        .animate-marquee {
-            animation: marquee 30s linear infinite;
+        .animate-marquee { animation: marquee 30s linear infinite; }
+        .animate-marquee:hover { animation-play-state: paused; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate-marquee { animation: none; }
         }
-        .animate-marquee:hover {
-            animation-play-state: paused;
+
+        html { scroll-behavior: smooth; }
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid #fbcfe8;
+            outline-offset: 3px;
+            border-radius: 6px;
         }
     </style>
 </head>
-<body class="bg-pink-400 text-white min-h-screen flex flex-col justify-between font-sans">
+<body class="bg-pink-800 text-white min-h-screen flex flex-col justify-between font-sans">
 
-    <!-- TOPO: FOTO E NOME (Igual ao modelo de referência) -->
-    <header class="w-full pt-12 pb-6 flex flex-col items-center justify-center text-center">
-        <img src="./assets/foto.jpg" alt="Vera Lúcia" class="w-40 h-40 rounded-full object-cover border-4 border-white shadow-xl mb-4">
-        
-        <h1 class="text-4xl font-bold tracking-wide">Vera Lúcia</h1>
-        <p class="text-lg text-pink-100 mt-1">Desenvolvedora Front-end | React | TypeScript | Tailwind CSS</p>
+    <!-- TOPO: FOTO, NOME E CHAMADAS -->
+    <header class="w-full pt-12 pb-8 px-6 flex flex-col items-center justify-center text-center">
+        <img src="./assets/foto.jpg" alt="Vera Lúcia Paula de Lima" class="w-40 h-40 rounded-full object-cover border-4 border-white shadow-xl mb-4">
+
+        <h1 class="text-4xl font-bold tracking-wide">Vera Lúcia Paula de Lima</h1>
+        <p class="text-lg text-pink-100 mt-2">Desenvolvedora Front-end Júnior&nbsp; |&nbsp; React · JavaScript · PWA mobile-first</p>
+
+        <p class="mt-4 inline-flex items-center gap-2 bg-pink-950/70 border border-pink-300/50 rounded-full px-4 py-1.5 text-sm text-pink-50">
+            <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+            Aberta a oportunidades — Florianópolis ou remoto
+        </p>
+
+        <div class="flex flex-wrap gap-3 justify-center mt-6">
+            <a href="./curriculo-vera-lucia.pdf" target="_blank" rel="noopener"
+               class="px-5 py-2.5 bg-white text-pink-900 font-semibold rounded-lg hover:bg-pink-50 transition">
+                📄 Baixar currículo
+            </a>
+            <a href="https://www.linkedin.com/in/verapaulalima" target="_blank" rel="noopener"
+               class="px-5 py-2.5 bg-pink-950/70 border border-pink-300/50 rounded-lg hover:bg-pink-950 transition">
+                LinkedIn
+            </a>
+            <a href="https://github.com/Veralucia0909" target="_blank" rel="noopener"
+               class="px-5 py-2.5 bg-pink-950/70 border border-pink-300/50 rounded-lg hover:bg-pink-950 transition">
+                GitHub
+            </a>
+            <a href="mailto:limaveralucia2018@gmail.com"
+               class="px-5 py-2.5 bg-pink-950/70 border border-pink-300/50 rounded-lg hover:bg-pink-950 transition">
+                E-mail
+            </a>
+        </div>
     </header>
 
-    <!-- FAIXA DE FERRAMENTAS / STACK (ícones passando em looping) -->
-    <section class="py-4 bg-pink-700/50 shadow-inner overflow-hidden">
+    <!-- FAIXA DE FERRAMENTAS / STACK -->
+    <section class="py-4 bg-pink-950/50 shadow-inner overflow-hidden" aria-label="Tecnologias que utilizo">
         <div class="flex w-max gap-16 animate-marquee">
-            <!-- Grupo 1 -->
             <div class="flex items-center gap-16 shrink-0">
                 <img src="https://skillicons.dev/icons?i=react" class="h-12 w-12" alt="React">
-                <img src="https://skillicons.dev/icons?i=ts" class="h-12 w-12" alt="TypeScript">
                 <img src="https://skillicons.dev/icons?i=js" class="h-12 w-12" alt="JavaScript">
                 <img src="https://skillicons.dev/icons?i=html" class="h-12 w-12" alt="HTML5">
                 <img src="https://skillicons.dev/icons?i=css" class="h-12 w-12" alt="CSS3">
-                <img src="https://skillicons.dev/icons?i=tailwind" class="h-12 w-12" alt="Tailwind CSS">
                 <img src="https://skillicons.dev/icons?i=vite" class="h-12 w-12" alt="Vite">
-                <img src="https://skillicons.dev/icons?i=reactnative" class="h-12 w-12" alt="React Native">
-                <img src="https://skillicons.dev/icons?i=nodejs" class="h-12 w-12" alt="Node.js">
-                <img src="https://skillicons.dev/icons?i=express" class="h-12 w-12" alt="Express">
-                <img src="https://skillicons.dev/icons?i=python" class="h-12 w-12" alt="Python">
-                <img src="https://skillicons.dev/icons?i=postgres" class="h-12 w-12" alt="PostgreSQL">
-                <img src="https://skillicons.dev/icons?i=mysql" class="h-12 w-12" alt="MySQL">
+                <img src="https://skillicons.dev/icons?i=tailwind" class="h-12 w-12" alt="Tailwind CSS">
                 <img src="https://skillicons.dev/icons?i=supabase" class="h-12 w-12" alt="Supabase">
                 <img src="https://skillicons.dev/icons?i=firebase" class="h-12 w-12" alt="Firebase">
                 <img src="https://skillicons.dev/icons?i=vercel" class="h-12 w-12" alt="Vercel">
                 <img src="https://skillicons.dev/icons?i=git" class="h-12 w-12" alt="Git">
                 <img src="https://skillicons.dev/icons?i=github" class="h-12 w-12" alt="GitHub">
-                <img src="https://skillicons.dev/icons?i=vscode" class="h-12 w-12" alt="VS Code">
+                <img src="https://skillicons.dev/icons?i=ts" class="h-12 w-12" alt="TypeScript">
+                <img src="https://skillicons.dev/icons?i=nodejs" class="h-12 w-12" alt="Node.js">
+                <img src="https://skillicons.dev/icons?i=express" class="h-12 w-12" alt="Express">
+                <img src="https://skillicons.dev/icons?i=prisma" class="h-12 w-12" alt="Prisma">
+                <img src="https://skillicons.dev/icons?i=postgres" class="h-12 w-12" alt="PostgreSQL">
+                <img src="https://skillicons.dev/icons?i=mysql" class="h-12 w-12" alt="MySQL">
+                <img src="https://skillicons.dev/icons?i=python" class="h-12 w-12" alt="Python">
                 <img src="https://skillicons.dev/icons?i=postman" class="h-12 w-12" alt="Postman">
                 <img src="https://skillicons.dev/icons?i=figma" class="h-12 w-12" alt="Figma">
-                <img src="https://skillicons.dev/icons?i=prisma" class="h-12 w-12" alt="Prisma">
+                <img src="https://skillicons.dev/icons?i=vscode" class="h-12 w-12" alt="VS Code">
             </div>
-            <!-- Grupo 2 (cópia idêntica, para o loop ficar contínuo) -->
             <div class="flex items-center gap-16 shrink-0" aria-hidden="true">
                 <img src="https://skillicons.dev/icons?i=react" class="h-12 w-12" alt="">
-                <img src="https://skillicons.dev/icons?i=ts" class="h-12 w-12" alt="">
                 <img src="https://skillicons.dev/icons?i=js" class="h-12 w-12" alt="">
                 <img src="https://skillicons.dev/icons?i=html" class="h-12 w-12" alt="">
                 <img src="https://skillicons.dev/icons?i=css" class="h-12 w-12" alt="">
-                <img src="https://skillicons.dev/icons?i=tailwind" class="h-12 w-12" alt="">
                 <img src="https://skillicons.dev/icons?i=vite" class="h-12 w-12" alt="">
-                <img src="https://skillicons.dev/icons?i=reactnative" class="h-12 w-12" alt="">
-                <img src="https://skillicons.dev/icons?i=nodejs" class="h-12 w-12" alt="">
-                <img src="https://skillicons.dev/icons?i=express" class="h-12 w-12" alt="">
-                <img src="https://skillicons.dev/icons?i=python" class="h-12 w-12" alt="">
-                <img src="https://skillicons.dev/icons?i=postgres" class="h-12 w-12" alt="">
-                <img src="https://skillicons.dev/icons?i=mysql" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=tailwind" class="h-12 w-12" alt="">
                 <img src="https://skillicons.dev/icons?i=supabase" class="h-12 w-12" alt="">
                 <img src="https://skillicons.dev/icons?i=firebase" class="h-12 w-12" alt="">
                 <img src="https://skillicons.dev/icons?i=vercel" class="h-12 w-12" alt="">
                 <img src="https://skillicons.dev/icons?i=git" class="h-12 w-12" alt="">
                 <img src="https://skillicons.dev/icons?i=github" class="h-12 w-12" alt="">
-                <img src="https://skillicons.dev/icons?i=vscode" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=ts" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=nodejs" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=express" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=prisma" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=postgres" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=mysql" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=python" class="h-12 w-12" alt="">
                 <img src="https://skillicons.dev/icons?i=postman" class="h-12 w-12" alt="">
                 <img src="https://skillicons.dev/icons?i=figma" class="h-12 w-12" alt="">
-                <img src="https://skillicons.dev/icons?i=prisma" class="h-12 w-12" alt="">
+                <img src="https://skillicons.dev/icons?i=vscode" class="h-12 w-12" alt="">
             </div>
         </div>
     </section>
 
-    <!-- SEÇÃO SOBRE MIM E EXPERIÊNCIAS -->
-    <main class="w-full px-6 md:px-16 py-10 space-y-8 bg-pink-700/30">
+    <main class="w-full px-6 md:px-16 py-10 space-y-10">
+
+        <!-- SOBRE MIM -->
         <section>
-            <h2 class="text-2xl font-bold border-b-2 border-pink-400 pb-2 mb-4">Sobre mim</h2>
+            <h2 class="text-2xl font-bold border-b-2 border-pink-300 pb-2 mb-4">Sobre mim</h2>
             <div class="grid gap-4 sm:grid-cols-2">
-                <div class="bg-pink-700/40 rounded-lg p-5 sm:col-span-2">
+                <div class="bg-pink-950/60 rounded-lg p-5 sm:col-span-2">
                     <h3 class="text-lg font-semibold mb-2 text-left">🚀 Trajetória</h3>
                     <p class="text-lg text-pink-50 leading-relaxed text-left">
-                        Sou uma Desenvolvedora Front-end e estudante de Desenvolvimento de Sistemas no SENAI/SC, trazendo para a tecnologia uma sólida bagagem e experiência prévia em manutenção elétrica, eletromecânica e automação industrial. Em minha transição de carreira para a área de TI, uni a minha paixão por resolução de problemas complexos ao desenvolvimento de software moderno. Desde então, tenho me destacado na criação de aplicações web eficientes, responsivas e focadas na experiência do usuário.
+                        Sou desenvolvedora front-end e estudante de Desenvolvimento de Sistemas no SENAI/SC. Antes do código, passei mais de 7 anos em manutenção elétrica, eletromecânica e automação industrial — diagnosticando falhas sob pressão, em equipamento que não podia parar. Levo esse mesmo raciocínio investigativo para o software: pesquiso, testo e entrego. Foi assim que identifiquei um gargalo no fluxo de documentos da imobiliária onde trabalho, propus uma solução e coloquei o AssinaDoc no ar — sistema que hoje é usado todos os dias por pessoas reais.
                     </p>
                 </div>
-                <div class="bg-pink-700/40 rounded-lg p-5">
+                <div class="bg-pink-950/60 rounded-lg p-5">
                     <h3 class="text-lg font-semibold mb-2 text-left">💻 Tecnologias</h3>
                     <p class="text-lg text-pink-50 leading-relaxed text-left">
-                        Tenho experiência em tecnologias de front-end, como React, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, além de trabalhar com Vite e bibliotecas para consumo de APIs com Axios. No ecossistema de desenvolvimento, também possuo conhecimentos em back-end com Node.js, Express, Python e manipulação de bancos de dados relacionais e em nuvem como PostgreSQL, MySQL, Supabase e Firebase, além de ferramentas como Git, GitHub, Postman, Prisma e Figma.
+                        Trabalho principalmente com <strong>React, JavaScript (ES6+), HTML5 e CSS3</strong>, com foco em <strong>PWA mobile-first</strong>: aplicações instaláveis, que funcionam offline e são pensadas para o celular antes do desktop. Uso Vite no build, Tailwind CSS na estilização e consumo de APIs REST com Axios. Também tenho experiência com Supabase (Postgres, Edge Functions e autenticação) e Firebase. Estou aprofundando TypeScript, Node.js, Express, Prisma e PostgreSQL nos projetos de back-end do curso.
                     </p>
                 </div>
-                <div class="bg-pink-700/40 rounded-lg p-5">
+                <div class="bg-pink-950/60 rounded-lg p-5">
                     <h3 class="text-lg font-semibold mb-2 text-left">🌱 Motivação</h3>
                     <p class="text-lg text-pink-50 leading-relaxed text-left">
-                        Sou apaixonada por aprender continuamente, otimizar processos e criar soluções que geram impacto real. Acredito que a combinação da minha vivência anterior em ambientes industriais com a agilidade do desenvolvimento web me proporciona uma visão analítica diferenciada na entrega de software de qualidade.
+                        Sou apaixonada por aprender continuamente, otimizar processos e criar soluções que geram impacto real. Acredito que a combinação da minha vivência anterior em ambientes industriais com a agilidade do desenvolvimento web me dá uma visão analítica diferenciada na entrega de software de qualidade.
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO DE PROJETOS -->
+        <!-- PROJETOS -->
         <section>
-            <h2 class="text-2xl font-bold border-b-2 border-pink-400 pb-2 mb-4">Projetos</h2>
+            <h2 class="text-2xl font-bold border-b-2 border-pink-300 pb-2 mb-4">Projetos</h2>
             <div class="space-y-6">
 
-                <div class="bg-pink-700/40 rounded-lg p-5">
+                <!-- ASSINADOC -->
+                <article class="bg-pink-950/60 rounded-lg p-5">
                     <h3 class="text-xl font-semibold text-left">📄 AssinaDoc — Assinatura digital de documentos via WhatsApp</h3>
                     <p class="text-lg text-pink-100 italic mb-2 text-left">Em produção, cliente real</p>
-                    <p class="text-lg text-pink-100 mb-3 text-left"><strong>Stack:</strong> JavaScript (ES6+), HTML5, CSS3, Supabase (Postgres + autenticação), APIs REST/JSON, deploy na Vercel</p>
+                    <p class="text-lg text-pink-100 mb-3 text-left"><strong>Stack:</strong> JavaScript (ES6+), HTML5, CSS3, Supabase (Postgres + Edge Functions), APIs REST/JSON, deploy na Vercel</p>
+                    <figure class="my-4">
+                        <video controls preload="none" playsinline
+                               poster="./midia/assinadoc-poster.jpg"
+                               class="w-full rounded-lg border border-pink-300/30 shadow-lg bg-black">
+                            <source src="./midia/assinadoc-demo.mp4" type="video/mp4">
+                            Seu navegador não reproduz vídeo. <a class="underline" href="./midia/assinadoc-demo.mp4">Baixe a demonstração aqui.</a>
+                        </video>
+                        <figcaption class="text-base text-pink-200 mt-2">🎬 Demonstração (52s) — fluxo completo em modo demonstração: login, preenchimento, geração do link, assinatura, PDF assinado e painel. Todos os dados do vídeo são fictícios.</figcaption>
+                    </figure>
                     <ul class="list-disc list-inside space-y-1 text-pink-50 text-lg">
                         <li>Identifiquei o gargalo no fluxo de documentos da imobiliária onde trabalho e propus, desenvolvi e coloquei no ar a solução — do levantamento do problema ao deploy.</li>
-                        <li>Integração com WhatsApp e consumo de APIs REST (JSON) para envio, acompanhamento e assinatura dos documentos, eliminando deslocamentos de inquilinos e proprietários.</li>
+                        <li>Envio do documento pelo WhatsApp, assinatura no celular com o dedo e devolução do PDF assinado, eliminando deslocamentos de inquilinos e proprietários.</li>
                         <li>Modelagem das tabelas, autenticação e regras de acesso no Supabase, com controle de status de cada documento.</li>
-                        <li>Deploy contínuo na Vercel integrado ao GitHub: cada push na branch principal publica automaticamente a nova versão.</li>
+                        <li>Segurança tratada no servidor: senhas em Edge Functions (nenhum segredo no código do site), PDFs em bucket privado com link temporário de 15 minutos, sessão com validade e bloqueio contra tentativa automática de senha.</li>
+                        <li>Consentimento LGPD registrado antes da assinatura.</li>
                         <li>Sistema em uso real: evolução e correção de bugs contínuas a partir do feedback de quem usa todos os dias.</li>
                     </ul>
-                   
-                </div>
+                    <div class="flex flex-wrap items-center gap-3 mt-4">
+                        <a href="https://www.assinadocwhatsapp.com.br/" target="_blank" rel="noopener"
+                           class="px-4 py-2 bg-white text-pink-900 font-semibold rounded-lg hover:bg-pink-50 transition">Ver online</a>
+                        <span class="text-pink-200 text-base italic">Código privado — sistema de cliente</span>
+                    </div>
+                </article>
 
-                <div class="bg-pink-700/40 rounded-lg p-5">
+                <!-- BUSONTIME -->
+                <article class="bg-pink-950/60 rounded-lg p-5">
                     <h3 class="text-xl font-semibold text-left">🚌 BusOnTime Floripa — App PWA de mobilidade urbana</h3>
-                    <p class="text-lg text-pink-100 italic mb-2 text-left">2º lugar Hackathon SENAI 2026</p>
+                    <p class="text-lg text-pink-100 italic mb-2 text-left">2º lugar — Hackathon SENAI 2026</p>
                     <p class="text-lg text-pink-100 mb-3 text-left"><strong>Stack:</strong> React, Vite, Leaflet, MySQL, Service Workers</p>
+                    <figure class="my-4">
+                        <video controls preload="none" playsinline
+                               poster="./midia/busontime-poster.jpg"
+                               class="w-full rounded-lg border border-pink-300/30 shadow-lg bg-black">
+                            <source src="./midia/busontime-demo.mp4" type="video/mp4">
+                            Seu navegador não reproduz vídeo. <a class="underline" href="./midia/busontime-demo.mp4">Baixe a demonstração aqui.</a>
+                        </video>
+                        <figcaption class="text-base text-pink-200 mt-2">🎬 Demonstração (54s) — dashboard, mapa em tempo real, carteira digital com recarga via PIX, histórico de viagens, notificações e troca de tema.</figcaption>
+                    </figure>
                     <ul class="list-disc list-inside space-y-1 text-pink-50 text-lg">
                         <li>MVP mobile-first construído do zero em equipe, em poucos dias de hackathon, com divisão de tarefas e versionamento no GitHub.</li>
                         <li>Rastreamento de ônibus em tempo real com mapas interativos (Leaflet) e previsão de lotação apoiada em IA.</li>
+                        <li>Carteira digital com recarga via PIX, histórico de viagens e recarga automática por saldo mínimo.</li>
+                        <li>Linhas favoritas com alerta de chegada, central de notificações e tema claro/escuro.</li>
                         <li>Funcionamento offline e instalação na tela inicial via Service Workers, pensando em quem espera o ônibus com conexão instável.</li>
                     </ul>
-                   
-                </div>
+                    <div class="flex flex-wrap items-center gap-3 mt-4">
+                        <a href="https://busontime-floripa.vercel.app/" target="_blank" rel="noopener"
+                           class="px-4 py-2 bg-white text-pink-900 font-semibold rounded-lg hover:bg-pink-50 transition">Ver online</a>
+                        <a href="https://github.com/Veralucia0909/busOnTime" target="_blank" rel="noopener"
+                           class="px-4 py-2 bg-pink-900/70 border border-pink-300/50 rounded-lg hover:bg-pink-900 transition">Ver código</a>
+                    </div>
+                </article>
 
-                <div class="bg-pink-700/40 rounded-lg p-5">
-                    <h3 class="text-xl font-semibold text-left">💰 Gestão Financeira — Aplicação web com Firebase</h3>
-                    <p class="text-lg text-pink-100 italic mb-2 text-left">Projeto acadêmico</p>
-                    <p class="text-lg text-pink-100 mb-3 text-left"><strong>Stack:</strong> JavaScript, HTML5, CSS3, Firebase (Authentication e Firestore)</p>
-                    <ul class="list-disc list-inside space-y-1 text-pink-50 text-lg">
-                        <li>Cadastro e login de usuários com Firebase Authentication e persistência de receitas e despesas no Firestore.</li>
-                        <li>Geração de gráficos e tabela detalhada de gastos a partir dos dados de cada usuário, para apoiar a organização financeira.</li>
-                    </ul>
-                </div>
-
-                <div class="bg-pink-700/40 rounded-lg p-5">
+                <!-- KITENERGIA -->
+                <article class="bg-pink-950/60 rounded-lg p-5">
                     <h3 class="text-xl font-semibold text-left">⚡ KitEnergia — PWA de leitura e gestão de energia</h3>
                     <p class="text-lg text-pink-100 italic mb-2 text-left">Projeto acadêmico</p>
-                    <p class="text-lg text-pink-100 mb-3 text-left"><strong>Stack:</strong> React, JavaScript, PWA, armazenamento local (LocalStorage)</p>
+                    <p class="text-lg text-pink-100 mb-3 text-left"><strong>Stack:</strong> React, Vite, JavaScript, PWA (Service Worker + Manifest), LocalStorage, deploy na Vercel</p>
+                    <figure class="my-4">
+                        <video controls preload="none" playsinline
+                               poster="./midia/kitenergia-poster.jpg"
+                               class="w-full rounded-lg border border-pink-300/30 shadow-lg bg-black">
+                            <source src="./midia/kitenergia-demo.mp4" type="video/mp4">
+                            Seu navegador não reproduz vídeo. <a class="underline" href="./midia/kitenergia-demo.mp4">Baixe a demonstração aqui.</a>
+                        </video>
+                        <figcaption class="text-base text-pink-200 mt-2">🎬 Demonstração (44s) — cadastro de leitura, acompanhamento do consumo e instalação do app na tela inicial.</figcaption>
+                    </figure>
                     <ul class="list-disc list-inside space-y-1 text-pink-50 text-lg">
                         <li>CRUD completo para leitura e acompanhamento do consumo de 12 unidades habitacionais.</li>
-                        <li>Interface responsiva desenhada para uso no celular durante a leitura em campo.</li>
+                        <li>Emissão de fatura em PDF com demonstrativo de consumo e dashboard com total em kWh, tarifa aplicada e unidade de maior consumo.</li>
+                        <li>App instalável na tela inicial e com funcionamento offline — pensado para quem faz a leitura em campo, onde nem sempre há sinal.</li>
                     </ul>
-                    
-                </div>
+                    <div class="flex flex-wrap items-center gap-3 mt-4">
+                        <a href="https://kitenergia.vercel.app/" target="_blank" rel="noopener"
+                           class="px-4 py-2 bg-white text-pink-900 font-semibold rounded-lg hover:bg-pink-50 transition">Ver online</a>
+                        <a href="https://github.com/Veralucia0909/KitEnergia" target="_blank" rel="noopener"
+                           class="px-4 py-2 bg-pink-900/70 border border-pink-300/50 rounded-lg hover:bg-pink-900 transition">Ver código</a>
+                    </div>
+                </article>
+
+                <!-- PAINEL HOSTGATOR -->
+                <article class="bg-pink-950/60 rounded-lg p-5">
+                    <h3 class="text-xl font-semibold text-left">🖥️ Painel de Comunidade — Desafio técnico HostGator / UniSENAI</h3>
+                    <p class="text-lg text-pink-100 italic mb-2 text-left">Desafio técnico</p>
+                    <p class="text-lg text-pink-100 mb-3 text-left"><strong>Stack:</strong> JavaScript (ES6+), HTML5, CSS3</p>
+                    <ul class="list-disc list-inside space-y-1 text-pink-50 text-lg">
+                        <li>Aplicação web que processa um conjunto anonimizado de mensagens de uma comunidade de tecnologia e transforma os dados em um painel de acompanhamento.</li>
+                        <li>Tratamento e agregação dos dados no front-end, com visualização pensada para leitura rápida.</li>
+                    </ul>
+                    <div class="flex flex-wrap items-center gap-3 mt-4">
+                        <a href="https://desafio-hostgator-unisenai.vercel.app/" target="_blank" rel="noopener"
+                           class="px-4 py-2 bg-white text-pink-900 font-semibold rounded-lg hover:bg-pink-50 transition">Ver online</a>
+                        <a href="https://github.com/Veralucia0909/desafio-hostgator-unisenai" target="_blank" rel="noopener"
+                           class="px-4 py-2 bg-pink-900/70 border border-pink-300/50 rounded-lg hover:bg-pink-900 transition">Ver código</a>
+                    </div>
+                </article>
+
+                <!-- GESTÃO FINANCEIRA -->
+                <article class="bg-pink-950/60 rounded-lg p-5">
+                    <h3 class="text-xl font-semibold text-left">💰 Gestão Financeira — Aplicação web com Firebase</h3>
+                    <p class="text-lg text-pink-100 italic mb-2 text-left">Projeto acadêmico em equipe — minha parte: autenticação</p>
+                    <p class="text-lg text-pink-100 mb-3 text-left"><strong>Stack:</strong> JavaScript (ES6+), HTML5, CSS3, Firebase Authentication, deploy na Vercel</p>
+                    <ul class="list-disc list-inside space-y-1 text-pink-50 text-lg">
+                        <li>Desenvolvi o cadastro, o login e a recuperação de senha com Firebase Authentication, incluindo validação de formulário, tratamento de erros e a sessão que liga cada usuário aos seus próprios dados.</li>
+                        <li>A persistência das movimentações no Firestore e os gráficos ficaram a cargo de outro integrante da equipe.</li>
+                    </ul>
+                    <div class="flex flex-wrap items-center gap-3 mt-4">
+                        <a href="https://gestao-financeira-crud.vercel.app/" target="_blank" rel="noopener"
+                           class="px-4 py-2 bg-white text-pink-900 font-semibold rounded-lg hover:bg-pink-50 transition">Ver online</a>
+                        <a href="https://github.com/Veralucia0909/Gestao-Financeira" target="_blank" rel="noopener"
+                           class="px-4 py-2 bg-pink-900/70 border border-pink-300/50 rounded-lg hover:bg-pink-900 transition">Ver código</a>
+                    </div>
+                </article>
 
             </div>
         </section>
 
-        <!-- SEÇÃO DE CONTATO -->
-        <section>
-            <h2 class="text-2xl font-bold border-b-2 border-pink-400 pb-2 mb-4">Minhas Redes</h2>
-            <div class="flex flex-wrap gap-4">
-                <a href="https://www.linkedin.com/in/verapaulalima" target="_blank" class="px-4 py-2 bg-pink-700/60 rounded-lg hover:bg-pink-700 transition">LinkedIn</a>
-                <a href="https://github.com/Veralucia0909" target="_blank" class="px-4 py-2 bg-pink-700/60 rounded-lg hover:bg-pink-700 transition">GitHub</a>
-                <a href="mailto:limaveralucia2018@gmail.com" class="px-4 py-2 bg-pink-700/60 rounded-lg hover:bg-pink-700 transition">E-mail</a>
-            </div>
+        <!-- FECHAMENTO -->
+        <section class="text-center pt-2">
+            <p class="text-lg text-pink-50">
+                Gostou do que viu? Me chame no
+                <a href="mailto:limaveralucia2018@gmail.com" class="underline decoration-pink-300 underline-offset-4 hover:text-white">e-mail</a>
+                ou no
+                <a href="https://www.linkedin.com/in/verapaulalima" target="_blank" rel="noopener" class="underline decoration-pink-300 underline-offset-4 hover:text-white">LinkedIn</a>.
+                O currículo completo está <a href="./curriculo-vera-lucia.pdf" target="_blank" rel="noopener" class="underline decoration-pink-300 underline-offset-4 hover:text-white">aqui</a>.
+            </p>
         </section>
     </main>
 
-    <!-- RODAPÉ -->
-    <footer class="w-full bg-pink-600 text-center py-4 text-sm text-pink-200">
-        <p>© 2026 Vera Lúcia Paula de Lima. Todos os direitos reservados.</p>
+    <footer class="w-full bg-pink-950 text-center py-4 text-sm text-pink-200">
+        <p>© 2026 Vera Lúcia Paula de Lima</p>
     </footer>
 
 </body>
